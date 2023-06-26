@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "name": "Vignesh Gupta",
+      "email": "vignesh.gupta@hcl.com",
+      "password": "12345",
+      "role": "librarian",
+      "favBooks": [
+        3
+      ],
+      "issuedBooks": [],
+      "id": 1
+    },
+    {
+      "name": "Vignesh Gupta",
+      "email": "admin@libzy.com",
+      "password": "1234",
+      "role": "admin",
+      "favBooks": [
+        3
+      ],
+      "issuedBooks": [
+        {
+          "bookId": 3,
+          "returnDate": "07/03/2023",
+          "transcationId": 4
+        },
+        {
+          "bookId": 2,
+          "returnDate": "07/03/2023",
+          "transcationId": 5
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "title": "Btomic Habbits",
+      "description": "How small habit can make huge impacts!",
+      "imgUrl": "https://m.media-amazon.com/images/I/51gJpbOQpHL._SY346_.jpg",
+      "isTrending": true,
+      "count": 10,
+      "rating": 4.5,
+      "author": "James Clear",
+      "id": 2
+    },
+    {
+      "title": "Ctomic Habbits",
+      "description": "How small habit can make huge impacts!",
+      "imgUrl": "https://m.media-amazon.com/images/I/51gJpbOQpHL._SY346_.jpg",
+      "isTrending": false,
+      "count": 10,
+      "rating": 2,
+      "author": "James Clear",
+      "id": 3
+    },
+    {
+      "id": 5,
+      "title": "Btomic Habbits",
+      "description": "asdsadasdas",
+      "isTrending": false,
+      "count": 2,
+      "rating": 1.5,
+      "author": "asd"
+    }
+  ],
+  "transactions": [
+    {
+      "bookName": "Ctomic Habbits",
+      "user": "Vignesh Gupta",
+      "userEmail": "admin@libzy.com",
+      "issuedDate": "06/16/2023",
+      "returnDate": "06/16/2023",
+      "dueDate": "06/23/2023",
+      "id": 1
+    },
+    {
+      "bookName": "Btomic Habbits",
+      "user": "Vignesh Gupta",
+      "userEmail": "admin@libzy.com",
+      "issuedDate": "06/16/2023",
+      "returnDate": "06/16/2023",
+      "dueDate": "06/15/2023",
+      "id": 2
+    },
+    {
+      "bookName": "Btomic Habbits",
+      "user": "Vignesh Gupta",
+      "userEmail": "vignesh.gupta@hcl.com",
+      "issuedDate": "06/16/2023",
+      "returnDate": "06/16/2023",
+      "dueDate": "06/23/2023",
+      "id": 3
+    },
+    {
+      "bookName": "Ctomic Habbits",
+      "user": "Vignesh Gupta",
+      "userEmail": "admin@libzy.com",
+      "issuedDate": "06/26/2023",
+      "returnDate": "",
+      "dueDate": "07/03/2023",
+      "id": 4
+    },
+    {
+      "bookName": "Btomic Habbits",
+      "user": "Vignesh Gupta",
+      "userEmail": "admin@libzy.com",
+      "issuedDate": "06/26/2023",
+      "returnDate": "",
+      "dueDate": "07/03/2023",
+      "id": 5
+    }
+  ]
+}
