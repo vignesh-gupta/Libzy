@@ -52,7 +52,7 @@ const Signup = () => {
   return (
     <section
       id="register"
-      className="w-full flex justify-center items-center min-h-[40vh] sm:min-h-[80.8vh] px-5 sm:px-10"
+      className="w-full flex justify-center items-center min-h-[40vh] sm:min-h-[85.3vh] px-5 sm:px-10"
     >
       <div className="flex justify-center items-center flex-col w-full">
         <div className="text-center lg:text-left">

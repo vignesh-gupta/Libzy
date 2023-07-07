@@ -1,6 +1,6 @@
 const Error = () => {
   return (
-    <div className="min-h-[80.8vh]  flex justify-center items-center flex-col gap-2">
+    <div className="min-h-[85.3vh]  flex justify-center items-center flex-col gap-2">
       <div className="mockup-window border bg-base-300 ">
         <div className="flex justify-center px-4 py-16 bg-base-200 items-center flex-col gap-2">
           <h1 className="text-2xl">Oops! Something seems wrong</h1>

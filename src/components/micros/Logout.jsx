@@ -17,7 +17,7 @@ const Logout = () => {
   },[navigate, setUser])
 
   return (
-    <div className="flex flex-col gap-2 justify-center items-center min-h-[80.8vh] w-100">
+    <div className="flex flex-col gap-2 justify-center items-center min-h-[85.3vh] w-100">
       <p className="text-lg">You have been Looged Out!</p>
       <p>See you Soon!</p>
     </div>
