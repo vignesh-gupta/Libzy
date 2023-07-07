@@ -13,6 +13,7 @@ import StarRating from "./StarRating";
 import moment from "moment";
 import { DATE_FORMAT } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const BookCard = ({ title, imgUrl, author, description, id, rating }) => {
   const { user, setUser } = useContext(UserContext);
@@ -37,11 +38,7 @@ const BookCard = ({ title, imgUrl, author, description, id, rating }) => {
       );
 
       if (panelty > 0)
-        alert(
-          "Please pay the amount of " +
-            panelty +
-            "to the Libary Reception due to delay book submission"
-        );
+        swal(`Please pay the amount of ${panelty} to the Libary Reception due to delay book submission`);
 
       await updateTranscation({
         body: {

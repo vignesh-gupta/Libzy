@@ -10,10 +10,6 @@ export const navLinks = [
     name: "Books",
     path: "/books",
   },
-  {
-    name: "Contact Us",
-    path: "/books",
-  }
 ];
 
 export const loggedInNavLinks = [

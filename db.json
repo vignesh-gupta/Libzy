@@ -32,37 +32,77 @@
         }
       ],
       "id": 2
+    },
+    {
+      "name": "admin",
+      "email": "admin2@libzy.com",
+      "password": "12345",
+      "role": "member",
+      "favBooks": [],
+      "issuedBooks": [],
+      "id": 3
     }
   ],
   "books": [
     {
-      "title": "Btomic Habbits",
+      "title": "Atomic Habbits",
       "description": "How small habit can make huge impacts!",
       "imgUrl": "https://m.media-amazon.com/images/I/51gJpbOQpHL._SY346_.jpg",
       "isTrending": true,
       "count": 10,
       "rating": 4.5,
       "author": "James Clear",
+      "id": 1
+    },
+    {
+      "title": "Rich Dad Poor Dad",
+      "description": "What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not! ",
+      "isTrending": true,
+      "count": "5",
+      "rating": "5",
+      "author": " Robert T. Kiyosaki",
+      "imgUrl": "https://m.media-amazon.com/images/I/51Hfv2MfNGL._SX331_BO1,204,203,200_.jpg",
       "id": 2
     },
     {
-      "title": "Ctomic Habbits",
-      "description": "How small habit can make huge impacts!",
-      "imgUrl": "https://m.media-amazon.com/images/I/51gJpbOQpHL._SY346_.jpg",
-      "isTrending": false,
-      "count": 10,
-      "rating": 2,
-      "author": "James Clear",
+      "title": "Clean Code",
+      "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way.",
+      "isTrending": "",
+      "count": "5",
+      "rating": "5",
+      "author": " Robert C. Martin",
+      "imgUrl": "https://m.media-amazon.com/images/I/41xShlnTZTL._SX376_BO1,204,203,200_.jpg",
       "id": 3
     },
     {
-      "id": 5,
-      "title": "Btomic Habbits",
-      "description": "asdsadasdas",
+      "title": "Maintainable JavaScript",
+      "description": "You may have definite ideas about writing code when working alone, but team development requires that everyone use the same approach. With the JavaScript practices in this book—including code style, programming tips, and automation—you will learn how to write maintainable code that other team members can easily understand, adapt, and extend.",
+      "isTrending": true,
+      "count": "5",
+      "rating": "4",
+      "author": " Nicholas C. Zakas",
+      "imgUrl": "https://m.media-amazon.com/images/I/510YouhUn7L._SX379_BO1,204,203,200_.jpg",
+      "id": 4
+    },
+    {
+      "title": "The Psychology of Money",
+      "description": "Doing well with money isn’t necessarily about what you know. It’s about how you behave. And behavior is hard to teach, even to really smart people.",
+      "isTrending": true,
+      "count": "10",
+      "rating": "4.5",
+      "author": "Morgan Housel",
+      "imgUrl": "https://cdn.kobo.com/book-images/96eeea7b-ab09-4b40-95bd-ac439b22ddc8/353/569/90/False/the-psychology-of-money-4.jpg",
+      "id": 5
+    },
+    {
+      "title": "Do Epic Shit",
+      "description": "Ankur Warikoo is an entrepreneur and content creator whose deep, witty and brutally honest thoughts on success and failure, money and investing, self-awareness and personal relationships have made him one of India’s top personal brands. In his first book, Ankur puts together the key ideas that have fueled his journey – one that began with him wanting to be a space engineer and ended with him creating content that has been seen and read by millions.",
       "isTrending": false,
-      "count": 2,
-      "rating": 1.5,
-      "author": "asd"
+      "count": "6",
+      "rating": "4.5",
+      "author": "Ankur Warikoo",
+      "imgUrl": "https://m.media-amazon.com/images/I/61kRkfsIMUL._SY466_.jpg",
+      "id": 6
     }
   ],
   "transactions": [

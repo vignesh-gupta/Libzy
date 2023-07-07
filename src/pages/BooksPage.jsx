@@ -14,12 +14,12 @@ const BooksPage = () => {
 
   const issuedBooksData = allBooksResponse.data?.filter(
     (book) =>
-      user?.issuedBooks.findIndex(
+      user?.issuedBooks?.findIndex(
         (Issuedbook) => Issuedbook.bookId === book.id
       ) > -1
   );
 
-  const favBooksData = allBooksResponse.data?.filter(book => user?.favBooks.includes(book.id))
+  const favBooksData = allBooksResponse?.data?.filter(book => user?.favBooks?.includes(book.id))
   return userBookType === "issued" ? (
     <UserBookSection {...allBooksResponse} data={issuedBooksData} />
   ) : userBookType === "wishlist" ? (

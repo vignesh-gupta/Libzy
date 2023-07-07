@@ -3,6 +3,7 @@ import {
   useAddNewUserMutation,
   useUpdateUserMutation,
 } from "../../services/libServices";
+import swal from "sweetalert";
 
 const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
   const [addUser] = useAddNewUserMutation();
@@ -27,6 +28,7 @@ const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
           );
           return newUsers;
         });
+        swal("User Updated!", "If no changes, please refresh the page once.", "success");
       } else {
         let addedUser = await addUser({
           ...selectedUser,
@@ -34,6 +36,7 @@ const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
         }).then((res) => res.data);
         setAllUsers((prev) => [...prev, addedUser]);
         // console.log(addedUser);
+        swal("User Added!", "If the user is not visible refresh the page once.", "success");
       }
     } catch (error) {
       console.log(error);

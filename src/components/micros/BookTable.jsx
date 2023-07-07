@@ -4,6 +4,7 @@ import BookModal from "./BookModal";
 import { useEffect, useState } from "react";
 import { useUpdateBookMutation } from "../../services/libServices";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const BookTable = ({ books }) => {
   const newBook = {
@@ -40,18 +41,39 @@ const BookTable = ({ books }) => {
   }
 
   function handleDeleteBooks(id) {
-    setAllBooks((prev) => {
-      let updatedBooks = [...prev].filter((book) => book.id !== id);
-      return updatedBooks;
+
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover the Book",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        setAllBooks((prev) => {
+          let updatedBooks = [...prev].filter((book) => book.id !== id);
+          return updatedBooks;
+        });
+    
+        try {
+          deleteBook({ bookId: id, method: "DELETE" });
+        } catch (error) {
+          console.log(error);
+          navigate("/error");
+          return;
+        }
+        swal("The Book has been deleted", {
+          icon: "success",
+        });
+      } else {
+        swal("Book Deletion Cancelled!", {
+          icon: "error",
+        });
+      }
     });
 
-    try {
-      deleteBook({ bookId: id, method: "DELETE" });
-    } catch (error) {
-      console.log(error);
-      navigate("/error");
-      return;
-    }
+    
   }
 
   return (

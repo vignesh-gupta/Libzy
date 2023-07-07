@@ -3,6 +3,7 @@ import {
   useAddBookMutation,
   useUpdateBookMutation,
 } from "../../services/libServices";
+import swal from "sweetalert";
 
 const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
   const [updateBook] = useUpdateBookMutation();
@@ -26,10 +27,13 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
           );
           return newBooks;
         });
+        swal("Book Updated!", "If the changes is not visible refresh the page once.", "success");
       } else {
         let addedBook = await addBook(selectedBook).then((res) => res.data);
         setAllBooks((prev) => [...prev, addedBook]);
         console.log(addedBook);
+        swal("Book Added!", "If the book is not visivle refresh the page once.", "success");
+
       }
     } catch (error) {
       console.log(error);

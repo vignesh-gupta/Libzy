@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import { setCookie } from "../../utils/util-functions";
 import LabelledInput from "../micros/LabelledInput";
+import swal from "sweetalert";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Login = () => {
       .then((res) => res.data[0]);
 
     if (!userData) {
-      alert("Not a valid User");
+      swal("Not a valid User", "Username or Password is incorrect", "error");
       return;
     }
 

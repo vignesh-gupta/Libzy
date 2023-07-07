@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../App";
 import UserModal from './UserModal'
 import { useNavigate } from "react-router-dom";
+import swal from 'sweetalert';
 
 const UserTable = ({ users, isAdmin }) => {
   const newUser = {
@@ -56,19 +57,39 @@ const UserTable = ({ users, isAdmin }) => {
   }
 
   function handleDeleteUser(id){
-    setAllUsers((prev) => {
-      let updatedUsers = [...prev].filter((u) => u.id !== id);
-      return updatedUsers;
+
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover the User data!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        setAllUsers((prev) => {
+          let updatedUsers = [...prev].filter((u) => u.id !== id);
+          return updatedUsers;
+        });
+    
+        try{
+          deleteUser({ userId: id , method: "DELETE" });
+        }catch(error){
+          console.log(error);
+          navigate("/error")
+          return; 
+        }
+        swal("The user has been deleted", {
+          icon: "success",
+        });
+      } else {
+        swal("User Deletion Cancelled!", {
+          icon: "error",
+        });
+      }
     });
 
-    try{
-
-      deleteUser({ userId: id , method: "DELETE" });
-    }catch(error){
-      console.log(error);
-      navigate("/error")
-      return; 
-    }
+   
   }
 
   return (

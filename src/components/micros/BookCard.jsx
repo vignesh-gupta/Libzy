@@ -104,7 +104,9 @@ const BookCard = ({
           )}
         </h2>
         <p className="text-sm font-semibold">Author : {author}</p>
-        <p className="text-sm truncate max-w-xs">{description}</p>
+        <div className="tooltip" data-tip={description}>
+        <p className="text-sm  max-w-xs px-5 truncate">{description}</p>
+        </div>
         <p className="text-lg">
           <StarRating rating={rating} />
         </p>

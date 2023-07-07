@@ -7,6 +7,7 @@ import { BACKEND_URL } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import { setCookie } from "../../utils/util-functions";
 import { UserContext } from "../../App";
+import swal from "sweetalert";
 
 const Signup = () => {
   const {
@@ -27,7 +28,7 @@ const Signup = () => {
         .get(`${BACKEND_URL}/users?email=${data.email}`)
         .then((res) => res.data.length > 0);
       if (isEmailUsed) {
-        alert("Email is already register!");
+      swal("Email already taken", `${data.email} is already register with another user`, "error");
         return;
       }
 
