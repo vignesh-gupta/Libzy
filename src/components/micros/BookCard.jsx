@@ -126,7 +126,8 @@ const BookCard = ({
             className="btn btn-primary"
             disabled={
               !count > 0 ||
-              user?.issuedBooks?.some((book) => book.bookId === id)
+              user?.issuedBooks?.some((book) => book.bookId === id) ||
+              !user
             }
             onClick={handleBookIssue}
           >
