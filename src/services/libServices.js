@@ -76,9 +76,7 @@ export const libServices = createApi({
 })
 
 export const {
-  useGetBooksQuery, useUpdateBookMutation,
-  useDeleteBookMutation, useAddBookMutation, 
-  useAddNewUserMutation, useUpdateUserMutation, 
-  useGetTranscationsQuery , useAddNewTranscationsMutation,
-  useUpdateTranscationsMutation, useGetUsersQuery
+  useGetBooksQuery, useUpdateBookMutation, useAddBookMutation, 
+  useAddNewUserMutation, useUpdateUserMutation, useGetUsersQuery,
+  useGetTranscationsQuery , useAddNewTranscationsMutation,  useUpdateTranscationsMutation, 
 } = libServices
