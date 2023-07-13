@@ -24,7 +24,7 @@ const DashboardPage = () => {
 
   return (
     <section id='dashboard' className='mx-10'>
-      <h1 className='text-center py-2 text-2xl font-semibold'>Hello {user?.name?.split(" ")[0]}, Welcome back! </h1>
+      <h1 className='py-2 text-2xl font-semibold text-center'>Hello {user?.name?.split(" ")[0]}, Welcome back! </h1>
       <DashboardStats books={allBooks} users={allUsers} />
       <BookTable books={allBooks} />
       <UserTable users={allUsers} isAdmin={user?.role=="admin" ? true : false}  />

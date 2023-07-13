@@ -63,15 +63,15 @@ const BookCard = ({ title, imgUrl, author, description, id, rating }) => {
   }
 
   return (
-    <div className="card flex-col sm:flex-row card-side bg-base-100 shadow-xl px-8 sm:w-full w-4/5 ">
+    <div className="flex-col w-4/5 px-8 shadow-xl card sm:flex-row card-side bg-base-100 sm:w-full ">
       <figure className=" p-2 shrink-0 sm:min-w-[30vw] object-scale-down">
-        <img src={imgUrl} alt={title} className="max-h-80 object-contain" />
+        <img src={imgUrl} alt={title} className="object-contain max-h-80" />
       </figure>
       <div className="card-body flex-3">
         <h2 className="card-title">{title}</h2>
         <div className="flex flex-col gap-2 pl-2">
           <p>
-            <span className="font-semibold truncate w-full">
+            <span className="w-full font-semibold truncate">
               What is this about?
             </span>
             <br />
@@ -88,7 +88,7 @@ const BookCard = ({ title, imgUrl, author, description, id, rating }) => {
             {getReturnMsg(id, user?.issuedBooks)}
           </p>
         </div>
-        <div className="card-actions justify-end flex-1 items-end">
+        <div className="items-end justify-end flex-1 card-actions">
           <button className="btn btn-primary" onClick={handleBookReturn}>
             Return
           </button>

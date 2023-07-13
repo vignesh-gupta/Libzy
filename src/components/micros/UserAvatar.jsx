@@ -9,7 +9,7 @@ const UserAvatar = ({ user }) => {
     <div className="dropdown dropdown-end">
       <label tabIndex={0}>
         <div className="avatar placeholder">
-          <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+          <div className="w-12 rounded-full bg-neutral-focus text-neutral-content">
             <span className="text-2xl">
               {user?.email?.slice(0, 1).toUpperCase()}
             </span>
@@ -18,7 +18,7 @@ const UserAvatar = ({ user }) => {
       </label>
       <ul
         tabIndex={0}
-        className="menu menu-md dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-30"
+        className="p-2 mt-3 shadow menu menu-md dropdown-content bg-base-100 rounded-box w-30"
       >
         {(user?.role === "librarian" || user?.role === "admin" ) &&
           libarianNavLinks.map((navLink) => (

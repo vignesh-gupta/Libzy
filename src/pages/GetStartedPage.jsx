@@ -4,7 +4,7 @@ import Signup from "../components/sections/Signup";
 
 const GetStartedPage = () => {
   return (
-    <div className="flex flex-col md:flex-row w-full">
+    <div className="flex flex-col w-full md:flex-row">
       <div className="grid flex-grow card rounded-box place-items-center">
         <Login />
       </div>

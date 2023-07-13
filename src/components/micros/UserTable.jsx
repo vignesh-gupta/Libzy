@@ -93,12 +93,12 @@ const UserTable = ({ users, isAdmin }) => {
   }
 
   return (
-    <div className="overflow-x-auto py-5 ">
+    <div className="py-5 overflow-x-auto ">
       <div className="flex justify-end">
         <button className="btn btn-secondary" onClick={handleAddUser}>Add User</button>
       </div>
-      <table className="table table-auto table-pin-rows table-pin-cols shadow-xl">
-        <caption className="caption-top text-lg font-semibold mb-2">
+      <table className="table shadow-xl table-auto table-pin-rows table-pin-cols">
+        <caption className="mb-2 text-lg font-semibold caption-top">
           Users
         </caption>
         <thead>

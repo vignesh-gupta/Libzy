@@ -53,9 +53,9 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
   return (
     <>
       <dialog id="book_modal" className="modal">
-        <form method="dialog" className="modal-box w-11/12 max-w-5xl">
-          <h3 className="font-semibold text-xl">Edit Books</h3>
-          <div className="py-4 w-full flex gap-2 flex-wrap">
+        <form method="dialog" className="w-11/12 max-w-5xl modal-box">
+          <h3 className="text-xl font-semibold">Edit Books</h3>
+          <div className="flex flex-wrap w-full gap-2 py-4">
             <div className="grow">
               <label className="label" htmlFor="title">
                 <span className="label-text">Title of the Book</span>
@@ -63,7 +63,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <input
                 type="text"
                 placeholder="Title"
-                className="input input-bordered w-full"
+                className="w-full input input-bordered"
                 id="title"
                 value={selectedBook?.title || ""}
                 onChange={handleChange}
@@ -77,7 +77,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <input
                 type="text"
                 placeholder="Author"
-                className="input input-bordered w-full"
+                className="w-full input input-bordered"
                 id="author"
                 value={selectedBook?.author || ""}
                 onChange={handleChange}
@@ -106,7 +106,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <input
                 type="url"
                 placeholder="Image"
-                className="input input-bordered w-full"
+                className="w-full input input-bordered"
                 id="imgUrl"
                 value={selectedBook?.imgUrl || ""}
                 onChange={handleChange}
@@ -114,7 +114,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <a
                 target="_blank"
                 href={selectedBook?.imgUrl || ""}
-                className="link text-xs"
+                className="text-xs link"
                 rel="noreferrer"
               >
                 Check out
@@ -128,7 +128,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <input
                 type="number"
                 placeholder="Available Count"
-                className="input input-bordered w-full"
+                className="w-full input input-bordered"
                 id="count"
                 value={selectedBook?.count || ""}
                 onChange={handleChange}
@@ -144,7 +144,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
               <input
                 type="number"
                 placeholder="Available Count"
-                className="input input-bordered w-full"
+                className="w-full input input-bordered"
                 id="rating"
                 value={selectedBook?.rating || ""}
                 onChange={handleChange}
@@ -161,7 +161,7 @@ const BookModal = ({ selectedBook, setSelectedBook, setAllBooks }) => {
             </label>
             <textarea
               placeholder="Description of the Book"
-              className="textarea textarea-bordered w-full"
+              className="w-full textarea textarea-bordered"
               id="description"
               value={selectedBook?.description || ""}
               onChange={handleChange}

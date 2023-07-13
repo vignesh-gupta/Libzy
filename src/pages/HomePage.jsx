@@ -12,7 +12,7 @@ const Home = () => {
     <main>
       <HeroSection />
       <section className="flex flex-col p-4 ">
-        <h2 className="text-center my-4 text-5xl font-bold">
+        <h2 className="my-4 text-5xl font-bold text-center">
           Grab the Most Popular!
         </h2>
         <BookSection {...queryResponse} />

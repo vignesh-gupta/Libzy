@@ -31,11 +31,11 @@ const BookFilters = ({ filters , setFilters , booksList , setBooks}) => {
   }
 
   return (
-    <div className="bg-base-300 w-100 p-2 rounded-md m-2 flex join justify-center">
+    <div className="flex justify-center p-2 m-2 rounded-md bg-base-300 w-100 join">
       <div className="w-1/2">
         <div className="w-full">
           <input
-            className="input join-item w-full"
+            className="w-full input join-item"
             onChange={(e) =>
               setFilters({
                 ...filters,

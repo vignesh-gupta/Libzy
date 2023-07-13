@@ -56,9 +56,9 @@ const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
   return (
     <dialog id="user_modal" className="modal modal-bottom sm:modal-middle">
       <form method="dialog" className="modal-box">
-        <h3 className="font-bold text-lg">Edit User Details</h3>
+        <h3 className="text-lg font-bold">Edit User Details</h3>
 
-        <div className="py-4 w-full form-control gap-2 flex-wrap">
+        <div className="flex-wrap w-full gap-2 py-4 form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
@@ -67,7 +67,7 @@ const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
             placeholder="Name"
             id="name"
             value={selectedUser?.name || ""}
-            className="input input-bordered w-full"
+            className="w-full input input-bordered"
             onChange={handleChange}
           />
 
@@ -79,7 +79,7 @@ const UserModal = ({ selectedUser, setAllUsers, setSelectedUser }) => {
             placeholder="Name"
             id="email"
             value={selectedUser?.email || ""}
-            className="input input-bordered w-full"
+            className="w-full input input-bordered"
             onChange={handleChange}
           />
         </div>
