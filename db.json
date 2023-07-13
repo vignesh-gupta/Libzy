@@ -37,15 +37,6 @@
         }
       ],
       "id": 2
-    },
-    {
-      "name": "admin",
-      "email": "admin2@libzy.com",
-      "password": "12345",
-      "role": "member",
-      "favBooks": [],
-      "issuedBooks": [],
-      "id": 3
     }
   ],
   "books": [

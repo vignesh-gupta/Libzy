@@ -57,14 +57,14 @@ export function calulatePenalty(startDate, endDate) {
   return result.toString() === 'NaN' || result <= 0 ? "0" : result
 }
 
-export function sendEmail(email, name, book, issuedDate, panelty) {
-  emailjs.send("service_rdm8gjo", "template_dssfjif", {
+export async function sendEmail(email, name, book, issuedDate, panelty) {
+  return await emailjs.send("service_rdm8gjo", "template_dssfjif", {
     to_name: name,
     panelty_amount: panelty.toString(),
     book_name: book,
     issued_date: issuedDate,
     send_to: email,
   }, "NpDJpmOA_tt9oKfnn")
-    .then(res => console.log(res))
-    .catch(e => console.log(e))
+    .then(res => res)
+    .catch(e => e)
 }

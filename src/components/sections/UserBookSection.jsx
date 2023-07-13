@@ -18,7 +18,7 @@ const UserBookSection = ({ data = "", error, isLoading }) => {
   if (!user) return <Navigate to={"/"} />;
 
   return (
-    <>
+    <section>
       <BookFilters
         filters={filters}
         setFilters={setFilters}
@@ -35,7 +35,7 @@ const UserBookSection = ({ data = "", error, isLoading }) => {
           ? "No Issued Book"
           : books?.map((book) => <BookCardV2 {...book} key={book.id} />)}
       </div>
-    </>
+    </section>
   );
 };
 

@@ -17,7 +17,7 @@ const BookSection = ({ isExpanded, data = "", error, isLoading, isFavs }) => {
   if (isFavs && !user) return <Navigate to={"/"} />;
 
   return (
-    <>
+    <section>
       {isExpanded && (
         <BookFilters
           filters={filters}
@@ -46,7 +46,7 @@ const BookSection = ({ isExpanded, data = "", error, isLoading, isFavs }) => {
           </a>
         </div>
       )}
-    </>
+    </section>
   );
 };
 
