@@ -90,11 +90,11 @@ const BookCard = ({
   }
 
   return (
-    <div className="card card-compact w-80 flex-no-shrink bg-base-100 shadow-xl  border-black-800 border-2 ">
-      <figure className="px-6 pt-6 grow lg:min-h-[60%]">
+    <div className="border-2 shadow-xl card card-compact w-80 flex-no-shrink bg-base-100 border-black-800 ">
+      <figure className="px-6 pt-6 grow">
         <img src={imgUrl} alt={title} />
       </figure>
-      <div className="card-body items-center text-center">
+      <div className="items-center text-center card-body">
         <h2 className="card-title">
           {title}
           {isTrending && (
@@ -105,12 +105,12 @@ const BookCard = ({
         </h2>
         <p className="text-sm font-semibold">Author : {author}</p>
         <div className="tooltip" data-tip={description}>
-        <p className="text-sm  max-w-xs px-5 truncate">{description}</p>
+        <p className="max-w-xs px-5 text-sm truncate">{description}</p>
         </div>
         <p className="text-lg">
           <StarRating rating={rating} />
         </p>
-        <div className="card-actions flex justify-around w-11/12 pt-4">
+        <div className="flex justify-around w-11/12 pt-4 card-actions">
           {user && (
             <button className="btn btn-circle" onClick={handleAddFav}>
               <FontAwesomeIcon

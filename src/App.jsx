@@ -26,18 +26,23 @@ function App() {
   return (
     <BrowserRouter>
     <UserContext.Provider value={{user, setUser}}>
-      <Navbar />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} errorElement={<Error />} />
-          <Route exact path="get-started" element={<GetStartedPage />} errorElement={<Error />} />
-          <Route exact path="dashboard" element={<DashboardPage />} errorElement={<Error />} />
-          <Route path="books" element={<BooksPage showIssuedBooks={false} />} errorElement={<Error />} >
-            <Route path=":userBookType" element={<BooksPage showIssuedBooks={true} />} errorElement={<Error />} />
-          </Route>
-          <Route exact path="logout" element={<Logout />} errorElement={<Error />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="grow">
+          <Routes>
+            <Route exact path="/" element={<HomePage />} errorElement={<Error />} />
+            <Route exact path="get-started" element={<GetStartedPage />} errorElement={<Error />} />
+            <Route exact path="dashboard" element={<DashboardPage />} errorElement={<Error />} />
+            <Route path="books" element={<BooksPage showIssuedBooks={false} />} errorElement={<Error />} >
+              <Route path=":userBookType" element={<BooksPage showIssuedBooks={true} />} errorElement={<Error />} />
+            </Route>
+            <Route exact path="logout" element={<Logout />} errorElement={<Error />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+        
     </UserContext.Provider>
     </BrowserRouter>
   );

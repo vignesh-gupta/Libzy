@@ -26,7 +26,7 @@ const UserBookSection = ({ data = "", error, isLoading }) => {
         setBooks={setBooks}
       />
 
-      <div className="flex p-4 flex-wrap gap-5 justify-center min-h-[70vh]">
+      <div className="flex flex-wrap justify-center gap-5 p-4">
         {isLoading
           ? "Loading"
           : error

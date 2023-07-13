@@ -48,13 +48,13 @@ const Login = () => {
   return (
     <section
       id="login"
-      className="w-full flex justify-center items-center min-h-[40vh] sm:min-h-[85.3vh] px-5 sm:px-10"
+      className="flex items-center justify-center w-full px-5 sm:px-10"
     >
-      <div className="flex justify-center items-center flex-col w-full">
+      <div className="flex flex-col items-center justify-center w-full">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold py-6">Login</h1>
+          <h1 className="py-6 text-5xl font-bold">Login</h1>
         </div>
-        <div className="card flex-shrink-0 max-w-sm w-full shadow-2xl bg-base-100">
+        <div className="flex-shrink-0 w-full max-w-sm shadow-2xl card bg-base-100">
           <form onSubmit={handleSubmit(onSubmitHandler)} className="card-body">
             <div className="form-control">
               <LabelledInput
@@ -71,13 +71,13 @@ const Login = () => {
                 register={register}
                 errors={errors}
               />
-              <label className="label flex justify-end">
+              <label className="flex justify-end label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
 
-              <label className="text-xs pl-1">
+              <label className="pl-1 text-xs">
                 Don't have an account?
                 <a className="font-semibold link link-hover" href="#register">
                   Signup
