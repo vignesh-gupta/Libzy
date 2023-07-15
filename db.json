@@ -42,6 +42,24 @@
         }
       ],
       "id": 2
+    },
+    {
+      "name": "Member Sharma",
+      "email": "member@libzy.com",
+      "password": "12345",
+      "role": "member",
+      "favBooks": [],
+      "issuedBooks": [],
+      "id": 3
+    },
+    {
+      "name": "Librarian Shah",
+      "email": "librarian@libzy.com",
+      "password": "12345",
+      "role": "librarian",
+      "favBooks": [],
+      "issuedBooks": [],
+      "id": 4
     }
   ],
   "books": [
