@@ -23,7 +23,7 @@ Pre-requisites - *npm should be installed*
 
 - **Member Role** (Creds: email - *<member@libzy.com>* & pass - *1234*)
   - Access for search books
-  - Borrow books and return books
+    - Borrow books and return books
   - See the books that they have already borrowed.
 
 - **Librarian Role** (Creds: email - *<librarian@libzy.com>* & pass - *1234*)
